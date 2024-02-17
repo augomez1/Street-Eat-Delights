@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+</head>
+
+<body>
+
+  <main>
+
+    <article class="card">
+      <div class="card__img-holder">
+        <img src="images/newlogo1.png" alt="Website Logo">
+      </div>
+      <div class="card__body">
+        <h1 class="title">Order Summary</h1>
+        <p class="text">You are now in the line of Order. Please wait patiently while we do our best to prepare and deliver your order.</p>
+        <div class="plan-box">
+          <div class="plan-box-left">
+            <img src="images/newlogo1.png" alt="" aria-hidden="true">
+            <div class="plan-details">
+                <h2>Street Eats Delight</h2>
+                <p>Food Delivery & Services</p>
+            </div>
+          </div>
+          <div class="plan-box-right">
+            <a href="product-shop.html">Change</a>
+          </div>
+        </div>
+      </div>
+      <div class="button-holder">
+        <a href="product-shop.html"> <button class="btn payment-btn" onclick="myFunction()">Confirm Payment</button>
+          <script>
+        
+          function myFunction() {
+            alert("Thank you for placing your order with us! We are thrilled to serve you. Your satisfaction is our priority, and we are working diligently to prepare and deliver your items. If you have any questions or special requests, feel free to let us know.");
+          }
+          </script>
+        </head>
+        <body>
+          </style>
+        </a>
+        <a href="product-shop.html"><button class="btn cancel-btn">Cancel Order</button> </a>
+      </div>
+    </article>
+  </main>
+
+</body>
+
+</html>
+
+<style>
+
+ 
+/* GENERAL STYLES */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url(images/pattern-background-mobile.svg), var(--clr-primary-pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.card {
+  background: orange;
+  border-radius: 20px;
+  box-shadow: 0 15px 25px 0 hsla(245, 75%, 52%, .11);
+  overflow: hidden;
+  max-width: 27.5rem;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+}
+
+/* CARD IMAGE */
+
+.card__img-holder img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* CARD BODY */
+
+.card__body {
+  text-align: center; 
+}
+
+.title {
+  color: var(--clr-neutral-blue-800);
+  font-size: 1.6rem;
+  font-weight: 900;
+  padding: 1.3em 0 .8em 0; 
+  color: #01042b;
+}
+
+.text {
+  color: var(--clr-neutral-blue-300);
+  line-height: 1.6;
+  font-size: .95rem;
+  padding: 0 2.1em 1.4em 2.1em;
+}
+
+/* PLAN BOX */
+
+.plan-box {
+  background:#01042b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1.5em 1.5em 1.5em;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.plan-box img{
+    width: 30%;
+} 
+
+.plan-box-left {
+  display: flex;
+}
+
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.2em;
+  gap: .2em;
+  text-align: left;
+  font-size: .7rem;
+  color: white;
+}
+
+.plan-details h3 {
+  color: var(--clr-neutral-blue-800);
+  font-size: .9rem;
+}
+
+.plan-details p {
+  color: var(--clr-neutral-blue-300);
+  font-size: .8rem;
+}
+
+.plan-box-right a {
+  color: orange;
+  font-weight: 700;
+  font-size: .8rem;
+  opacity: 1;
+  transition: all .2s ease;
+}
+
+.plan-box-right a:hover {
+  color: white;
+}
+
+.plan-box-right a:focus {
+  /* Provide a fallback style for browsers
+     that don't support :focus-visible */
+  outline: 3px dotted var(--clr-neutral-blue-300);
+}
+
+.plan-box-right a:focus:not(:focus-visible) {
+  /* Remove the focus indicator on mouse-focus for browsers
+     that do support :focus-visible */
+  outline: none;
+}
+
+.plan-box-right a:focus-visible {
+  /* for browsers that do support :focus-visible */
+  outline: 3px dotted var(--clr-neutral-blue-300);
+}
+
+
+/* BUTTONS */
+
+.button-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: .50em;
+  margin-bottom: 1.5em;
+}
+
+.btn {
+  all: unset;
+  display: block;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: .95rem;
+  font-weight: 700;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
+  padding: 1em;
+}
+
+.payment-btn {
+  background-color:rgb(40, 209, 40);
+  width: 320px;
+  color: white;
+  transition: all .2s ease;
+  margin-top: 20px;
+}
+
+.payment-btn:hover {
+  -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.cancel-btn {
+  background-color:  rgb(210, 21, 21);
+  transition: color .2s ease;
+  width: 320px;
+  color: white;
+  transition: all .2s ease;
+  margin-bottom: 20px;
+}
+
+.cancel-btn:hover {
+  -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 450px) {
+
+  body {
+    background: url(images/pattern-background-desktop.svg), var(--clr-primary-pale-blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    padding-top: 1.7em;
+    padding-bottom: .7em;
+  }
+
+  .text {
+    font-size: 1.05rem;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+
+  .plan-box {
+    margin: 0 3em 2em 3em;
+    padding: 1.5em;
+  }
+
+  .plan-details h3 {
+    font-size: 1.05rem;
+  }
+
+  .plan-details p {
+    font-size: 1.05rem;
+  }
+
+  .plan-box-right a {
+    font-size: .9rem;
+  }
+
+  .btn {
+    margin-left: 3em;
+    margin-right: 3em;
+  }
+
+}
+
+
+</style>
